@@ -1,5 +1,5 @@
 module "mysql_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/peddireddylokesh/terraform-aws-securitygroup.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "mysql"
@@ -11,7 +11,7 @@ module "mysql_sg" {
 
 
 module "bastion_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/peddireddylokesh/terraform-aws-securitygroup.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "bastion"
@@ -22,7 +22,7 @@ module "bastion_sg" {
 
 # ports 22, 443, 1194, 943 --> VPN ports
 module "vpn_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/peddireddylokesh/terraform-aws-securitygroup.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "vpn"
@@ -32,7 +32,7 @@ module "vpn_sg" {
 }
 
 module "alb_ingress_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/peddireddylokesh/terraform-aws-securitygroup.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "app-alb"
@@ -42,7 +42,7 @@ module "alb_ingress_sg" {
 }
 
 module "eks_control_plane_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/peddireddylokesh/terraform-aws-securitygroup.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "eks-control-plane"
@@ -52,7 +52,7 @@ module "eks_control_plane_sg" {
 }
 
 module "eks_node_sg" {
-    source = "git::https://github.com/DAWS-82S/terraform-aws-securitygroup.git?ref=main"
+    source = "git::https://github.com/peddireddylokesh/terraform-aws-securitygroup.git?ref=main"
     project_name = var.project_name
     environment = var.environment
     sg_name = "eks-node"
