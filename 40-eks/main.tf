@@ -1,6 +1,6 @@
 resource "aws_key_pair" "eks" {
   key_name   = "expense-eks"
-  public_key = file("~/.ssh/eks.pub")
+  public_key = file("/Users/lokeshpeddireddy999/.ssh/eks.pub")
 }
 
 module "eks" {
@@ -50,7 +50,7 @@ module "eks" {
       desired_size = 2
       iam_role_additional_policies = {
         AmazonEBSCSIDriverPolicy = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
-        AmazonEFSCSIDriverPolicy = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
+        AmazonEFSCSIDriverPolicy = "arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy"
         AmazonEKSLoadBalancingPolicy = "arn:aws:iam::aws:policy/AmazonEKSLoadBalancingPolicy"
       }
     }
