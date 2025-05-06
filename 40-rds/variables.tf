@@ -15,9 +15,9 @@ variable "common_tags" {
 }
 
 variable "zone_id" {
-    default = "Z021448929NMXW4P65UQE"
+    default = "Z00188163RC0DY3NOAH3R"
 }
 
 variable "domain_name" {
-    default = "daws82s.online"
+    default = "lokeshportfo.site"
 }
