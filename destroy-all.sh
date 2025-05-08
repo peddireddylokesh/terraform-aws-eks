@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIR="terraform-aws-eks"
+BASE_DIR="."
 
 # Loop through all subdirectories
 for dir in "$BASE_DIR"/*; do
